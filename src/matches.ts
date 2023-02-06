@@ -10,7 +10,7 @@ export type TinderMatch = {
     common_friend_count : number;
     common_like_count : number;
     created_date : Date;
-    dead : false;
+    dead : boolean;
     last_activity_date : Date;
     message_count : number;
     participants : string[];
@@ -34,7 +34,7 @@ export type TinderMatch = {
 
 export async function fetchMatches(token : string, count=60) : Promise<TinderMatch[]> {
     const profile = await axios
-    .get(`${TINDER_BASE_URL}/${TINDER_VERSION}/${TINDER_MATCHES_URL}&count=${count}`, {
+    .get(`${TINDER_MATCHES_URL}?locale=fr&message=1&count=${count}`, {
       headers: { 'x-auth-token': token },
     })
     .then((response) => response.data.data.matches as TinderMatch[]); 

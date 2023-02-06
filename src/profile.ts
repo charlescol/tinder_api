@@ -30,7 +30,7 @@ export type TinderProfile = {
 
 export async function fetchProfile(token : string) : Promise<TinderProfile> {
     const profile = await axios
-    .get(`${TINDER_BASE_URL}/${TINDER_PROFILE_URL}`, {
+    .get(TINDER_PROFILE_URL, {
       headers: { 'x-auth-token': token },
     })
     .then((response) => response.data as TinderProfile); 
