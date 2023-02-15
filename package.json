@@ -1,6 +1,6 @@
 {
-  "name": "tinder_api",
-  "version": "1.0.0",
+  "name": "@charlescol/tinder_api",
+  "version": "1.1.0",
   "description": "This package provides an easy method to access the Tinder API version 2 using HTTP, given a token.",
   "main": "index.ts",
   "author": "Charles COLELLA <charlescol@hotmail.fr>",
