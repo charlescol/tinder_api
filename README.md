@@ -7,10 +7,13 @@ This package provides an easy and convenient way to interact with the Tinder API
 
 This route fetches a specified number of matches (default is 60) for a given user. It returns an array of `TinderMatch` objects.
 
+## `fetchProfileWithId(token: string, userId: string): Promise<TinderProfile>`
+This route fetches the profile for a given user ID. It returns a `TinderProfile` object.
+
 ## `fetchProfile(token : string) : Promise<TinderProfile>`
 This route fetches the profile for a given user. It returns a `TinderProfile` object.
 
-## `fetchMessages(token: string, matchId: string): Promise<TinderMessage>`
+## `fetchMessages(token: string, matchId: string): Promise<TinderMessage[]>`
 This route fetches all messages for a specified match using a given token. It returns an array of `TinderMessage` objects.
 ## `sendMessage(token: string, matchId: string, message: string): Promise<TinderMessage>`
 This route sends a message to a specified match. It returns a `TinderMessage` object.

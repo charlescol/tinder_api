@@ -1,4 +1,4 @@
-import { TINDER_BASE_URL, TINDER_MATCHES_URL, TINDER_VERSION } from "./const";
+import {  TINDER_MATCHES_URL } from "./const";
 import { TinderProfile } from "./profile";
 import axios from 'axios';
 

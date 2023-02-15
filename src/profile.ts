@@ -1,10 +1,11 @@
 import axios from 'axios';
-import { TINDER_BASE_URL, TINDER_PROFILE_URL } from "./const";
+import { TINDER_PROFILE_URL, TINDER_USER_URL } from "./const";
 import { TinderGender } from "./common/enum";
 import { TinderJob, TinderPhoto, TinderPos } from "./common/type";
 
 export type TinderProfile = {
   id : string;
+  _id : string;
   bio : string;
   age_filter_max : number;
   age_filter_min : number;
@@ -35,4 +36,13 @@ export async function fetchProfile(token : string) : Promise<TinderProfile> {
     })
     .then((response) => response.data as TinderProfile); 
     return profile;
+}
+
+export async function fetchProfileWithId(token : string, userId : string) : Promise<TinderProfile> {
+  const user = await axios
+  .get(`${TINDER_USER_URL}/${userId}`, {
+    headers: { 'x-auth-token': token },
+  })
+  .then((response) => response.data.results as TinderProfile); 
+  return user;
 }
