@@ -16,7 +16,7 @@ export type TinderMessage = {
 /**
  * This route fetches all messages for a specified match using a given token
  *
- * @author Charles COLELLA
+ * @author charlescol
  * @date 15/02/2023
  * @param {string} token Api token
  * @param {string} matchId match for who fetch messages
@@ -34,7 +34,7 @@ export async function fetchMessages(token: string, matchId: string): Promise<Tin
 /**
  *
  *
- * @author Charles COLELLA
+ * @author charlescol
  * @date 15/02/2023
  * @param {string} token Api token
  * @param {string} matchId match for who send messages

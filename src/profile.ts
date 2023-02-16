@@ -32,7 +32,7 @@ export type TinderProfile = {
 /**
  * Fetch the profile of the token owner
  *
- * @author Charles COLELLA
+ * @author charlescol
  * @date 15/02/2023
  * @param {string} token
  * @return {*}  {Promise<TinderProfile>}
@@ -49,7 +49,7 @@ export async function fetchProfile(token : string) : Promise<TinderProfile> {
 /**
  * Fetch the profile for a given user ID
  *
- * @author Charles COLELLA
+ * @author charlescol
  * @date 15/02/2023
  * @param {string} token Api token
  * @param {string} userId id of the user

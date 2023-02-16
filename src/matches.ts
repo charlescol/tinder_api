@@ -35,7 +35,7 @@ export type TinderMatch = {
 /**
  * This route fetches a specified number of matches for a given user
  *
- * @author Charles COLELLA
+ * @author charlescol
  * @date 15/02/2023
  * @param {string} token Api token
  * @param {number} [count=60] Number to fetch
