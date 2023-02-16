@@ -32,6 +32,15 @@ export type TinderMatch = {
     is_archived : boolean;
 }
 
+/**
+ * This route fetches a specified number of matches for a given user
+ *
+ * @author Charles COLELLA
+ * @date 15/02/2023
+ * @param {string} token Api token
+ * @param {number} [count=60] Number to fetch
+ * @return {*}  {Promise<TinderMatch[]>}
+ */
 export async function fetchMatches(token : string, count=60) : Promise<TinderMatch[]> {
     const profile = await axios
     .get(`${TINDER_MATCHES_URL}?locale=fr&message=1&count=${count}`, {
