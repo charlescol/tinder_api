@@ -29,6 +29,14 @@ export type TinderProfile = {
   photos : TinderPhoto[];
 };
 
+/**
+ * Fetch the profile of the token owner
+ *
+ * @author Charles COLELLA
+ * @date 15/02/2023
+ * @param {string} token
+ * @return {*}  {Promise<TinderProfile>}
+ */
 export async function fetchProfile(token : string) : Promise<TinderProfile> {
     const profile = await axios
     .get(TINDER_PROFILE_URL, {
@@ -38,6 +46,15 @@ export async function fetchProfile(token : string) : Promise<TinderProfile> {
     return profile;
 }
 
+/**
+ * Fetch the profile for a given user ID
+ *
+ * @author Charles COLELLA
+ * @date 15/02/2023
+ * @param {string} token Api token
+ * @param {string} userId id of the user
+ * @return {*}  {Promise<TinderProfile>}
+ */
 export async function fetchProfileWithId(token : string, userId : string) : Promise<TinderProfile> {
   const user = await axios
   .get(`${TINDER_USER_URL}/${userId}`, {
