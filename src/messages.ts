@@ -14,7 +14,7 @@ export type TinderMessage = {
 }
 
 /**
- * This route fetches all messages for a specified match using a given token
+ * Fetch all messages for a specified match using a given token
  *
  * @author charlescol
  * @date 15/02/2023
@@ -32,7 +32,7 @@ export async function fetchMessages(token: string, matchId: string): Promise<Tin
 }
 
 /**
- *
+ * Send a message to a specified match
  *
  * @author charlescol
  * @date 15/02/2023

@@ -33,7 +33,7 @@ export type TinderMatch = {
 }
 
 /**
- * This route fetches a specified number of matches for a given user
+ * Fetch a specified number of matches for a given user
  *
  * @author charlescol
  * @date 15/02/2023
